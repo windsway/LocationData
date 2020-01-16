@@ -91,7 +91,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = 'locationData'
+  spec.source_files  = 'LocationData'
 
   #spec.exclude_files = "Classes/Exclude"
 
