@@ -134,7 +134,7 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  spec.dependency 'FMDB'
-  spec.dependency 'YYModel'
+  spec.dependency 'FMDB', '~> 2.6.2'
+  spec.dependency 'YYModel', '~> 1.0.4'
 
 end
