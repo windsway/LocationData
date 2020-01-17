@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LocationData"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "本地数据存储小工具"
 
   # This description is used to generate tags and improve search results.
@@ -53,7 +53,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "mac" => "一夜风吹屁屁凉" }
+  spec.author             = { "一夜风吹屁屁凉" => "376176293@qq.com" }
   # Or just: spec.author    = "mac"
   # spec.authors            = { "mac" => "376176293@qq.com" }
   # spec.social_media_url   = "https://twitter.com/mac"
@@ -91,7 +91,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "LocationData"
+  spec.source_files  = "LocationData/*.{h,m}"
 
   #spec.exclude_files = "Classes/Exclude"
 
