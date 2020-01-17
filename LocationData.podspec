@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LocationData"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "本地数据存储小工具"
 
   # This description is used to generate tags and improve search results.
@@ -135,6 +135,6 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency 'FMDB', '~> 2.6.2'
-  spec.dependency 'YYModel', '~> 1.0.4'
+  spec.dependency 'MJExtension', '~> 3.0.13'
 
 end

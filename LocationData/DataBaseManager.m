@@ -7,7 +7,7 @@
 //
 
 #import "DataBaseManager.h"
-#import "YYModel.h"
+#import "MJExtension.h"
 #import "extensionDB.h"
 @implementation DataBaseManager
 
@@ -32,7 +32,7 @@
     
     //2.存储对象的时候
     Class memberClass = NSClassFromString(tableName);
-    baseModel *model = [memberClass yy_modelWithDictionary:@{}];
+    baseModel *model = [memberClass mj_objectWithKeyValues:@{}];
     NSArray *Propertys = [model allPropertyNames];
     NSArray *Columns = [extensionDB GetAllColumnStrInTable:tableName];
     //如果 模型属性有，表字段中没有，那么表中加上字段
@@ -113,7 +113,7 @@
     NSMutableArray *NewArr = [NSMutableArray new];
     Class NowClass = [model class];
     for (NSDictionary *dic in rows) {
-        baseModel *model = [NowClass yy_modelWithDictionary:dic];
+        baseModel *model = [NowClass mj_objectWithKeyValues:dic];
         if (model) {
             [NewArr addObject:model];
         }
@@ -125,7 +125,7 @@
 +(baseModel *)getSectionById:(NSInteger)Id withtableModel:(baseModel *)model{
     NSString *sql=[NSString stringWithFormat:@"SELECT * FROM %@ WHERE id='%ld'",NSStringFromClass([model class]), (long)Id];
     NSArray *rows= [[extensionDB sharedextensionDB] executeQuery:sql];
-    return [[model class] yy_modelWithDictionary:rows.firstObject];
+    return [[model class] mj_objectWithKeyValues:rows.firstObject];
 }
 +(baseModel *)getSectionByProperty:(NSString *)name withCurrentModel:(baseModel *)model
 {
@@ -138,7 +138,7 @@
         sql=[NSString stringWithFormat:@"SELECT * FROM %@ WHERE %@='%d'",NSStringFromClass([model class]),name,[[model valueForKey:name] intValue]];
     }
     NSArray *rows= [[extensionDB sharedextensionDB] executeQuery:sql];
-    return [[model class] yy_modelWithDictionary:rows.firstObject];
+    return [[model class] mj_objectWithKeyValues:rows.firstObject];
 }
 
 @end
