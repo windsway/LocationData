@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface baseModel : NSObject
-@property (nonatomic, assign) NSUInteger id;
+@property (nonatomic, assign) NSUInteger myid;
 - (NSArray *)allPropertyNames;
 @end
 

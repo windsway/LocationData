@@ -26,7 +26,7 @@
 +(void)createtable:(NSString *)tableName{
     //1.判断表是否存在
     if (![extensionDB isExistTable:tableName]) {
-        NSString *sql = [NSString stringWithFormat:@"CREATE TABLE %@ (id integer AUTO_INCREMENT PRIMARY KEY)",tableName];
+        NSString *sql = [NSString stringWithFormat:@"CREATE TABLE %@ (myid integer AUTO_INCREMENT PRIMARY KEY)",tableName];
         [[extensionDB sharedextensionDB] executeNonQuery:sql];
     }
     
@@ -98,7 +98,7 @@
 /** 删除小课字典 */
 +(void)removeSection:(baseModel *)model{
     if (!model) {return;}
-    NSString *sql=[NSString stringWithFormat:@"DELETE FROM %@ WHERE id='%ld'",NSStringFromClass([model class]),(long)model.id];
+    NSString *sql=[NSString stringWithFormat:@"DELETE FROM %@ WHERE myid='%ld'",NSStringFromClass([model class]),(long)model.myid];
     [[extensionDB sharedextensionDB] executeNonQuery:sql];
 }
 /** 删除所有小课信息 */
@@ -123,7 +123,7 @@
 }
 /** 根据Id查询小课字典 */
 +(baseModel *)getSectionById:(NSInteger)Id withtableModel:(baseModel *)model{
-    NSString *sql=[NSString stringWithFormat:@"SELECT * FROM %@ WHERE id='%ld'",NSStringFromClass([model class]), (long)Id];
+    NSString *sql=[NSString stringWithFormat:@"SELECT * FROM %@ WHERE myid='%ld'",NSStringFromClass([model class]), (long)Id];
     NSArray *rows= [[extensionDB sharedextensionDB] executeQuery:sql];
     return [[model class] mj_objectWithKeyValues:rows.firstObject];
 }

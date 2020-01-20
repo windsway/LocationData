@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LocationData"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "本地数据存储小工具"
 
   # This description is used to generate tags and improve search results.
