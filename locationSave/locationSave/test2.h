@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface test2 : baseModel
-
+@property (nonatomic, strong) NSString *nowid;
+@property (nonatomic, strong) NSString *iphone;
 @end
 
 NS_ASSUME_NONNULL_END
