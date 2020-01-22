@@ -58,4 +58,7 @@
     NSArray *searchA = [DataBaseManager getSectionByRelevanceMoreTable:@{@"test1":@{@"des":@"objcname"},@"test2":@{@"searchKey":@"nowid",@"searchValue":@"1",@"resultKey":@"iphone"}}];
     return YES;
 }
+- (void)getname:(NSString *)newValue
+{
+}
 @end

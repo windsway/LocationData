@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
     searchvalue 查询字段对应值
     reslutkey 结果字段
  */
-+ (NSArray *)getSectionByRelevanceMoreTable:(NSDictionary *)info;
++ (NSArray *)getSectionByRelevanceMoreTableFromQueryTable:(NSString );
 @end
 
 NS_ASSUME_NONNULL_END
