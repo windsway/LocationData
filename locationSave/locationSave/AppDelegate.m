@@ -28,8 +28,8 @@
     [DataBaseManager initdatabaseWithTableName:@[@"test1",@"test2"]];
     test1 *model = [test1 new];
     model.myid = 1;
-    model.objcname = @"1111";
-    model.objcname11 = @"2222";
+    model.objcname = @"55";
+    model.objcname11 = @"666";
 
     [DataBaseManager replaceSection:model];
     test1 *model2 = [test1 new];
@@ -43,19 +43,18 @@
     model3.objcname = @"55";
     model3.objcname11 = @"666";
     [DataBaseManager replaceSection:model3];
-    NSArray *array = [DataBaseManager getAllSection:model];
-    test2 *people = [test2 new];
-    people.nowid = @"1";
-    people.myid = 1;
-    people.iphone = @"1111";
-    [DataBaseManager replaceSection:people];
-    test2 *people1 = [test2 new];
-    people1.nowid = @"1";
-    people1.myid = 2;
-    people1.iphone = @"3333";
-    [DataBaseManager replaceSection:people1];
-    NSArray *array3 = [DataBaseManager getAllSection:people1];
-    NSArray *searchA = [DataBaseManager getSectionByRelevanceMoreTable:@{@"test1":@{@"des":@"objcname"},@"test2":@{@"searchKey":@"nowid",@"searchValue":@"1",@"resultKey":@"iphone"}}];
+//    NSArray *array = [DataBaseManager getAllSection:model];
+//    test2 *people = [test2 new];
+//    people.nowid = @"1";
+//    people.myid = 1;
+//    people.iphone = @"1111";
+//    [DataBaseManager replaceSection:people];
+//    test2 *people1 = [test2 new];
+//    people1.nowid = @"1";
+//    people1.myid = 2;
+//    people1.iphone = @"3333";
+//    [DataBaseManager replaceSection:people1];
+    NSArray *tmpa = [DataBaseManager getSectionByRelevanceSignTable:[test1 new] withPropertys:@{@"objcname":@"55",@"objcname11":@"666"}];
     return YES;
 }
 - (void)getname:(NSString *)newValue

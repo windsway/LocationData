@@ -127,7 +127,7 @@
     NSArray *rows= [[extensionDB sharedextensionDB] executeQuery:sql];
     return [[model class] mj_objectWithKeyValues:rows.firstObject];
 }
-+(baseModel *)getSectionByProperty:(NSString *)name withCurrentModel:(baseModel *)model
++(NSArray *)getSectionByProperty:(NSString *)name withCurrentModel:(baseModel *)model
 {
     NSString *sql;
     if ([[model valueForKey:name] isKindOfClass:[NSString class]]) {
@@ -160,23 +160,5 @@
     }
     NSArray *rows = [[extensionDB sharedextensionDB] executeQuery:sql];
     return [[model class] mj_objectArrayWithKeyValuesArray:rows];
-}
-/**
- 关联多表查询
- @example info = @{@"tabe1":@{@"des":@"value"},@"table2":@{@"searchKey":@"property",@"searchValue":@"value",@"resultKey":@"resultValue"}}
- */
-+ (NSArray *)getSectionByRelevanceMoreTable:(NSDictionary *)info
-{
-    //@"select * from test1 where objcname IN (select iphone from test2 where nowid='1')"
-    NSString *desTablelName = [info allKeys][0];
-    NSString *dependTableName = [info allKeys][1];
-    NSString *desProperty = info[desTablelName][@"des"];
-    NSDictionary *searchDic = info[dependTableName];
-    NSString *searchKey = searchDic[@"searchKey"];
-    NSString *searchValue = searchDic[@"searchValue"];
-    NSString *resultKey = searchDic[@"resultKey"];
-    NSString *sql = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE %@ in (select %@ from %@ where %@='%@')",desTablelName,desProperty,resultKey,dependTableName,searchKey,searchValue];
-    NSArray *rows= [[extensionDB sharedextensionDB] executeQuery:sql];
-    return [NSClassFromString(desTablelName) mj_objectArrayWithKeyValuesArray:rows];
 }
 @end
