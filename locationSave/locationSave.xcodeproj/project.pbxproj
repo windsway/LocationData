@@ -36,6 +36,7 @@
 		04C2657123D15F770010F45C /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C2656523D15F770010F45C /* MJFoundation.m */; };
 		04C2657223D15F770010F45C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 04C2656623D15F770010F45C /* LICENSE */; };
 		04C2657323D15F770010F45C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 04C2656723D15F770010F45C /* README.md */; };
+		1EEC456C24AC3B3700395996 /* CustomTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC456B24AC3B3700395996 /* CustomTool.m */; };
 		97D9AA2E23CDFAAE00FCE933 /* test1.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D9AA2D23CDFAAE00FCE933 /* test1.m */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,8 @@
 		04C2656523D15F770010F45C /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
 		04C2656623D15F770010F45C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		04C2656723D15F770010F45C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1EEC456A24AC3B3700395996 /* CustomTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTool.h; sourceTree = "<group>"; };
+		1EEC456B24AC3B3700395996 /* CustomTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTool.m; sourceTree = "<group>"; };
 		97D9AA2C23CDFAAE00FCE933 /* test1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test1.h; sourceTree = "<group>"; };
 		97D9AA2D23CDFAAE00FCE933 /* test1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +158,8 @@
 				04587F4C23D6B25F00B0F436 /* extensionDB.h */,
 				04587F4823D6B25F00B0F436 /* extensionDB.m */,
 				04587F4B23D6B25F00B0F436 /* LocationDefine.h */,
+				1EEC456A24AC3B3700395996 /* CustomTool.h */,
+				1EEC456B24AC3B3700395996 /* CustomTool.m */,
 			);
 			name = LocationData;
 			path = ../../LocationData;
@@ -417,6 +422,7 @@
 				04C2656C23D15F770010F45C /* MJExtensionConst.m in Sources */,
 				04587F5023D6B25F00B0F436 /* DataBaseManager.m in Sources */,
 				0490E9B823CD9EDA00ADBDE5 /* AppDelegate.m in Sources */,
+				1EEC456C24AC3B3700395996 /* CustomTool.m in Sources */,
 				0490E9C923CD9EDC00ADBDE5 /* main.m in Sources */,
 				97D9AA2E23CDFAAE00FCE933 /* test1.m in Sources */,
 				04C2656F23D15F770010F45C /* NSString+MJExtension.m in Sources */,

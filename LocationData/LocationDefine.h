@@ -37,5 +37,5 @@ return _instance; \
 { \
 return _instance; \
 }
-
+#define UserInfo @"userinfo"
 #endif /* LocationDefine_h */
